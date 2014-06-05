@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30C52B5F19402243004DA99C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B5E19402243004DA99C /* Foundation.framework */; };
+		30C52B6119402243004DA99C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B6019402243004DA99C /* CoreGraphics.framework */; };
+		30C52B6319402243004DA99C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B6219402243004DA99C /* UIKit.framework */; };
+		30C52B6519402243004DA99C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B6419402243004DA99C /* CoreData.framework */; };
+		30C52B6B19402243004DA99C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30C52B6919402243004DA99C /* InfoPlist.strings */; };
+		30C52B6D19402243004DA99C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52B6C19402243004DA99C /* main.m */; };
+		30C52B7119402243004DA99C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52B7019402243004DA99C /* AppDelegate.m */; };
+		30C52B7419402243004DA99C /* ThingiverseApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30C52B7219402243004DA99C /* ThingiverseApp.xcdatamodeld */; };
+		30C52B7619402243004DA99C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C52B7519402243004DA99C /* Images.xcassets */; };
+		30C52B7D19402243004DA99C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B7C19402243004DA99C /* XCTest.framework */; };
+		30C52B7E19402243004DA99C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B5E19402243004DA99C /* Foundation.framework */; };
+		30C52B7F19402243004DA99C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B6219402243004DA99C /* UIKit.framework */; };
+		30C52B8019402243004DA99C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C52B6419402243004DA99C /* CoreData.framework */; };
+		30C52B8819402243004DA99C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30C52B8619402243004DA99C /* InfoPlist.strings */; };
+		30C52B8A19402243004DA99C /* ThingiverseAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52B8919402243004DA99C /* ThingiverseAppTests.m */; };
+		30C52B981940226B004DA99C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C52B931940226B004DA99C /* Main.storyboard */; };
+		30C52B991940226B004DA99C /* ThingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52B951940226B004DA99C /* ThingsTableViewCell.m */; };
+		30C52B9A1940226B004DA99C /* thingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C52B961940226B004DA99C /* thingCell.xib */; };
+		30C52B9B1940226B004DA99C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C52B971940226B004DA99C /* placeholder.png */; };
+		30C52BA51940228D004DA99C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52B9E1940228D004DA99C /* ViewController.m */; };
+		30C52BA61940228D004DA99C /* ThingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BA01940228D004DA99C /* ThingsTableViewController.m */; };
+		30C52BA71940228D004DA99C /* thingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BA21940228D004DA99C /* thingDetailViewController.m */; };
+		30C52BA81940228D004DA99C /* SearchDisplayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BA41940228D004DA99C /* SearchDisplayTableViewController.m */; };
+		30C52BB01940229D004DA99C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAB1940229D004DA99C /* Constants.m */; };
+		30C52BB11940229D004DA99C /* ThingiverseAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAD1940229D004DA99C /* ThingiverseAPIClient.m */; };
+		30C52BB21940229D004DA99C /* NewThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAF1940229D004DA99C /* NewThing.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30C52B8119402243004DA99C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C52B5319402243004DA99C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30C52B5A19402243004DA99C;
+			remoteInfo = ThingiverseApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30C52B5B19402243004DA99C /* ThingiverseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThingiverseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C52B5E19402243004DA99C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		30C52B6019402243004DA99C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		30C52B6219402243004DA99C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		30C52B6419402243004DA99C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		30C52B6819402243004DA99C /* ThingiverseApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThingiverseApp-Info.plist"; sourceTree = "<group>"; };
+		30C52B6A19402243004DA99C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30C52B6C19402243004DA99C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		30C52B6E19402243004DA99C /* ThingiverseApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThingiverseApp-Prefix.pch"; sourceTree = "<group>"; };
+		30C52B6F19402243004DA99C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		30C52B7019402243004DA99C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		30C52B7319402243004DA99C /* ThingiverseApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThingiverseApp.xcdatamodel; sourceTree = "<group>"; };
+		30C52B7519402243004DA99C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		30C52B7B19402243004DA99C /* ThingiverseAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThingiverseAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C52B7C19402243004DA99C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		30C52B8519402243004DA99C /* ThingiverseAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThingiverseAppTests-Info.plist"; sourceTree = "<group>"; };
+		30C52B8719402243004DA99C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30C52B8919402243004DA99C /* ThingiverseAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThingiverseAppTests.m; sourceTree = "<group>"; };
+		30C52B931940226B004DA99C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		30C52B941940226B004DA99C /* ThingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThingsTableViewCell.h; sourceTree = "<group>"; };
+		30C52B951940226B004DA99C /* ThingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThingsTableViewCell.m; sourceTree = "<group>"; };
+		30C52B961940226B004DA99C /* thingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thingCell.xib; sourceTree = "<group>"; };
+		30C52B971940226B004DA99C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		30C52B9D1940228D004DA99C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		30C52B9E1940228D004DA99C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		30C52B9F1940228D004DA99C /* ThingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThingsTableViewController.h; sourceTree = "<group>"; };
+		30C52BA01940228D004DA99C /* ThingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThingsTableViewController.m; sourceTree = "<group>"; };
+		30C52BA11940228D004DA99C /* thingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thingDetailViewController.h; sourceTree = "<group>"; };
+		30C52BA21940228D004DA99C /* thingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thingDetailViewController.m; sourceTree = "<group>"; };
+		30C52BA31940228D004DA99C /* SearchDisplayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDisplayTableViewController.h; sourceTree = "<group>"; };
+		30C52BA41940228D004DA99C /* SearchDisplayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDisplayTableViewController.m; sourceTree = "<group>"; };
+		30C52BAA1940229D004DA99C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		30C52BAB1940229D004DA99C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		30C52BAC1940229D004DA99C /* ThingiverseAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThingiverseAPIClient.h; sourceTree = "<group>"; };
+		30C52BAD1940229D004DA99C /* ThingiverseAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThingiverseAPIClient.m; sourceTree = "<group>"; };
+		30C52BAE1940229D004DA99C /* NewThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewThing.h; sourceTree = "<group>"; };
+		30C52BAF1940229D004DA99C /* NewThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewThing.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30C52B5819402243004DA99C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C52B6119402243004DA99C /* CoreGraphics.framework in Frameworks */,
+				30C52B6519402243004DA99C /* CoreData.framework in Frameworks */,
+				30C52B6319402243004DA99C /* UIKit.framework in Frameworks */,
+				30C52B5F19402243004DA99C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30C52B7819402243004DA99C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C52B7D19402243004DA99C /* XCTest.framework in Frameworks */,
+				30C52B8019402243004DA99C /* CoreData.framework in Frameworks */,
+				30C52B7F19402243004DA99C /* UIKit.framework in Frameworks */,
+				30C52B7E19402243004DA99C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30C52B5219402243004DA99C = {
+			isa = PBXGroup;
+			children = (
+				30C52B6619402243004DA99C /* ThingiverseApp */,
+				30C52B8319402243004DA99C /* ThingiverseAppTests */,
+				30C52B5D19402243004DA99C /* Frameworks */,
+				30C52B5C19402243004DA99C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30C52B5C19402243004DA99C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30C52B5B19402243004DA99C /* ThingiverseApp.app */,
+				30C52B7B19402243004DA99C /* ThingiverseAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30C52B5D19402243004DA99C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C52B5E19402243004DA99C /* Foundation.framework */,
+				30C52B6019402243004DA99C /* CoreGraphics.framework */,
+				30C52B6219402243004DA99C /* UIKit.framework */,
+				30C52B6419402243004DA99C /* CoreData.framework */,
+				30C52B7C19402243004DA99C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30C52B6619402243004DA99C /* ThingiverseApp */ = {
+			isa = PBXGroup;
+			children = (
+				30C52BA919402291004DA99C /* Objects */,
+				30C52B9C19402283004DA99C /* Controllers */,
+				30C52B6F19402243004DA99C /* AppDelegate.h */,
+				30C52B7019402243004DA99C /* AppDelegate.m */,
+				30C52B931940226B004DA99C /* Main.storyboard */,
+				30C52B941940226B004DA99C /* ThingsTableViewCell.h */,
+				30C52B951940226B004DA99C /* ThingsTableViewCell.m */,
+				30C52B961940226B004DA99C /* thingCell.xib */,
+				30C52B971940226B004DA99C /* placeholder.png */,
+				30C52B7519402243004DA99C /* Images.xcassets */,
+				30C52B7219402243004DA99C /* ThingiverseApp.xcdatamodeld */,
+				30C52B6719402243004DA99C /* Supporting Files */,
+			);
+			path = ThingiverseApp;
+			sourceTree = "<group>";
+		};
+		30C52B6719402243004DA99C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30C52B6819402243004DA99C /* ThingiverseApp-Info.plist */,
+				30C52B6919402243004DA99C /* InfoPlist.strings */,
+				30C52B6C19402243004DA99C /* main.m */,
+				30C52B6E19402243004DA99C /* ThingiverseApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30C52B8319402243004DA99C /* ThingiverseAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C52B8919402243004DA99C /* ThingiverseAppTests.m */,
+				30C52B8419402243004DA99C /* Supporting Files */,
+			);
+			path = ThingiverseAppTests;
+			sourceTree = "<group>";
+		};
+		30C52B8419402243004DA99C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30C52B8519402243004DA99C /* ThingiverseAppTests-Info.plist */,
+				30C52B8619402243004DA99C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30C52B9C19402283004DA99C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30C52B9D1940228D004DA99C /* ViewController.h */,
+				30C52B9E1940228D004DA99C /* ViewController.m */,
+				30C52B9F1940228D004DA99C /* ThingsTableViewController.h */,
+				30C52BA01940228D004DA99C /* ThingsTableViewController.m */,
+				30C52BA11940228D004DA99C /* thingDetailViewController.h */,
+				30C52BA21940228D004DA99C /* thingDetailViewController.m */,
+				30C52BA31940228D004DA99C /* SearchDisplayTableViewController.h */,
+				30C52BA41940228D004DA99C /* SearchDisplayTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30C52BA919402291004DA99C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				30C52BAA1940229D004DA99C /* Constants.h */,
+				30C52BAB1940229D004DA99C /* Constants.m */,
+				30C52BAC1940229D004DA99C /* ThingiverseAPIClient.h */,
+				30C52BAD1940229D004DA99C /* ThingiverseAPIClient.m */,
+				30C52BAE1940229D004DA99C /* NewThing.h */,
+				30C52BAF1940229D004DA99C /* NewThing.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30C52B5A19402243004DA99C /* ThingiverseApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30C52B8D19402243004DA99C /* Build configuration list for PBXNativeTarget "ThingiverseApp" */;
+			buildPhases = (
+				30C52B5719402243004DA99C /* Sources */,
+				30C52B5819402243004DA99C /* Frameworks */,
+				30C52B5919402243004DA99C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThingiverseApp;
+			productName = ThingiverseApp;
+			productReference = 30C52B5B19402243004DA99C /* ThingiverseApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30C52B7A19402243004DA99C /* ThingiverseAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30C52B9019402243004DA99C /* Build configuration list for PBXNativeTarget "ThingiverseAppTests" */;
+			buildPhases = (
+				30C52B7719402243004DA99C /* Sources */,
+				30C52B7819402243004DA99C /* Frameworks */,
+				30C52B7919402243004DA99C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30C52B8219402243004DA99C /* PBXTargetDependency */,
+			);
+			name = ThingiverseAppTests;
+			productName = ThingiverseAppTests;
+			productReference = 30C52B7B19402243004DA99C /* ThingiverseAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30C52B5319402243004DA99C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Danny;
+				TargetAttributes = {
+					30C52B7A19402243004DA99C = {
+						TestTargetID = 30C52B5A19402243004DA99C;
+					};
+				};
+			};
+			buildConfigurationList = 30C52B5619402243004DA99C /* Build configuration list for PBXProject "ThingiverseApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 30C52B5219402243004DA99C;
+			productRefGroup = 30C52B5C19402243004DA99C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30C52B5A19402243004DA99C /* ThingiverseApp */,
+				30C52B7A19402243004DA99C /* ThingiverseAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30C52B5919402243004DA99C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C52B9A1940226B004DA99C /* thingCell.xib in Resources */,
+				30C52B981940226B004DA99C /* Main.storyboard in Resources */,
+				30C52B6B19402243004DA99C /* InfoPlist.strings in Resources */,
+				30C52B9B1940226B004DA99C /* placeholder.png in Resources */,
+				30C52B7619402243004DA99C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30C52B7919402243004DA99C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C52B8819402243004DA99C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30C52B5719402243004DA99C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C52BB11940229D004DA99C /* ThingiverseAPIClient.m in Sources */,
+				30C52BA81940228D004DA99C /* SearchDisplayTableViewController.m in Sources */,
+				30C52B991940226B004DA99C /* ThingsTableViewCell.m in Sources */,
+				30C52BB21940229D004DA99C /* NewThing.m in Sources */,
+				30C52B7119402243004DA99C /* AppDelegate.m in Sources */,
+				30C52B7419402243004DA99C /* ThingiverseApp.xcdatamodeld in Sources */,
+				30C52BA71940228D004DA99C /* thingDetailViewController.m in Sources */,
+				30C52B6D19402243004DA99C /* main.m in Sources */,
+				30C52BA61940228D004DA99C /* ThingsTableViewController.m in Sources */,
+				30C52BA51940228D004DA99C /* ViewController.m in Sources */,
+				30C52BB01940229D004DA99C /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30C52B7719402243004DA99C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C52B8A19402243004DA99C /* ThingiverseAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30C52B8219402243004DA99C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30C52B5A19402243004DA99C /* ThingiverseApp */;
+			targetProxy = 30C52B8119402243004DA99C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		30C52B6919402243004DA99C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30C52B6A19402243004DA99C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		30C52B8619402243004DA99C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30C52B8719402243004DA99C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30C52B8B19402243004DA99C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		30C52B8C19402243004DA99C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30C52B8E19402243004DA99C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThingiverseApp/ThingiverseApp-Prefix.pch";
+				INFOPLIST_FILE = "ThingiverseApp/ThingiverseApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		30C52B8F19402243004DA99C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThingiverseApp/ThingiverseApp-Prefix.pch";
+				INFOPLIST_FILE = "ThingiverseApp/ThingiverseApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		30C52B9119402243004DA99C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ThingiverseApp.app/ThingiverseApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThingiverseApp/ThingiverseApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ThingiverseAppTests/ThingiverseAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		30C52B9219402243004DA99C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ThingiverseApp.app/ThingiverseApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThingiverseApp/ThingiverseApp-Prefix.pch";
+				INFOPLIST_FILE = "ThingiverseAppTests/ThingiverseAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30C52B5619402243004DA99C /* Build configuration list for PBXProject "ThingiverseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30C52B8B19402243004DA99C /* Debug */,
+				30C52B8C19402243004DA99C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30C52B8D19402243004DA99C /* Build configuration list for PBXNativeTarget "ThingiverseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30C52B8E19402243004DA99C /* Debug */,
+				30C52B8F19402243004DA99C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		30C52B9019402243004DA99C /* Build configuration list for PBXNativeTarget "ThingiverseAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30C52B9119402243004DA99C /* Debug */,
+				30C52B9219402243004DA99C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30C52B7219402243004DA99C /* ThingiverseApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30C52B7319402243004DA99C /* ThingiverseApp.xcdatamodel */,
+			);
+			currentVersion = 30C52B7319402243004DA99C /* ThingiverseApp.xcdatamodel */;
+			path = ThingiverseApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 30C52B5319402243004DA99C /* Project object */;
+}
