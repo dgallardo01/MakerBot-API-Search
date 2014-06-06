@@ -9,7 +9,6 @@ http://dannygtech.wordpress.com/2014/06/05/oauth-regex-apis-and-search-bars/
 Todo
 ====
 
-- Cache images for faster scroll and load time
 - Improve search feature to make API calls when necessary
 - Improve UI elements
 - Add a "POST" feature for users to be able to save to a collection for printing later.
