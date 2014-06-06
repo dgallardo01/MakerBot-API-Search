@@ -33,6 +33,8 @@
 		30C52BB01940229D004DA99C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAB1940229D004DA99C /* Constants.m */; };
 		30C52BB11940229D004DA99C /* ThingiverseAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAD1940229D004DA99C /* ThingiverseAPIClient.m */; };
 		30C52BB21940229D004DA99C /* NewThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAF1940229D004DA99C /* NewThing.m */; };
+		30C8D85619424ACA0034ED39 /* searchTableviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C8D85519424ACA0034ED39 /* searchTableviewCell.xib */; };
+		30C8D85919424B950034ED39 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C8D85819424B950034ED39 /* SearchTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,9 @@
 		30C52BAD1940229D004DA99C /* ThingiverseAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThingiverseAPIClient.m; sourceTree = "<group>"; };
 		30C52BAE1940229D004DA99C /* NewThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewThing.h; sourceTree = "<group>"; };
 		30C52BAF1940229D004DA99C /* NewThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewThing.m; sourceTree = "<group>"; };
+		30C8D85519424ACA0034ED39 /* searchTableviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchTableviewCell.xib; sourceTree = "<group>"; };
+		30C8D85719424B950034ED39 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		30C8D85819424B950034ED39 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,9 @@
 				30C52B941940226B004DA99C /* ThingsTableViewCell.h */,
 				30C52B951940226B004DA99C /* ThingsTableViewCell.m */,
 				30C52B961940226B004DA99C /* thingCell.xib */,
+				30C8D85519424ACA0034ED39 /* searchTableviewCell.xib */,
+				30C8D85719424B950034ED39 /* SearchTableViewCell.h */,
+				30C8D85819424B950034ED39 /* SearchTableViewCell.m */,
 				30C52B971940226B004DA99C /* placeholder.png */,
 				30C52B7519402243004DA99C /* Images.xcassets */,
 				30C52B7219402243004DA99C /* ThingiverseApp.xcdatamodeld */,
@@ -298,6 +306,7 @@
 				30C52B6B19402243004DA99C /* InfoPlist.strings in Resources */,
 				30C52B9B1940226B004DA99C /* placeholder.png in Resources */,
 				30C52B7619402243004DA99C /* Images.xcassets in Resources */,
+				30C8D85619424ACA0034ED39 /* searchTableviewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +330,7 @@
 				30C52B991940226B004DA99C /* ThingsTableViewCell.m in Sources */,
 				30C52BB21940229D004DA99C /* NewThing.m in Sources */,
 				30C52B7119402243004DA99C /* AppDelegate.m in Sources */,
+				30C8D85919424B950034ED39 /* SearchTableViewCell.m in Sources */,
 				30C52B7419402243004DA99C /* ThingiverseApp.xcdatamodeld in Sources */,
 				30C52BA71940228D004DA99C /* thingDetailViewController.m in Sources */,
 				30C52B6D19402243004DA99C /* main.m in Sources */,

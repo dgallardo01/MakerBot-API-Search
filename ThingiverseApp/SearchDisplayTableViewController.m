@@ -10,6 +10,7 @@
 #import "NewThing.h"
 #import "ThingiverseAPIClient.h"
 #import "thingDetailViewController.h"
+#import "SearchTableViewCell.h"
 
 @interface SearchDisplayTableViewController ()
 
@@ -43,7 +44,11 @@
     searchBar.placeholder = @"search for a thing";
     self.tableView.tableHeaderView = searchBar;
     
-    self.things = [[NSArray alloc]init];    
+    self.things = [[NSArray alloc]init];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"searchTableviewCell"  bundle:nil]forCellReuseIdentifier:@"searchCell"];
+    
+    self.tableView.rowHeight = 80.0f;
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,19 +73,40 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell" forIndexPath:indexPath];
+    SearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell" forIndexPath:indexPath];
+    
+    if(!cell){
+        [tableView registerNib:[UINib nibWithNibName:@"searchTableviewCell"  bundle:nil]forCellReuseIdentifier:@"searchCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell"];
+    }
     
     // Configure the cell...
     if ([self.things count] >0) {
         NewThing *singleThing = [self.things objectAtIndex:indexPath.row];
-        cell.textLabel.text = singleThing.thingName;
-        cell.detailTextLabel.text = singleThing.creatorName;
-        cell.imageView.clipsToBounds = YES;
-        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
+        cell.searchCellLabel.text = singleThing.thingName;
+//        cell.detailTextLabel.text = singleThing.creatorName;
+        cell.searchCellImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
     }
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    thingDetailViewController *detailVC = [storyBoard instantiateViewControllerWithIdentifier:@"thingDetail"];
+    
+    if ([self.things count] >0) {
+        NewThing *singleThing = [self.things objectAtIndex:indexPath.row];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            detailVC.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
+            detailVC.detailThingTitle.text = singleThing.thingName;
+            detailVC.detailThingCreator.text = singleThing.creatorName;
+        });
+    }
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+#pragma mark - Search Bar delegates
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     NSString *pattern = @"\\s";
@@ -97,24 +123,6 @@
     }];
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    thingDetailViewController *detailVC = [storyBoard instantiateViewControllerWithIdentifier:@"thingDetail"];
-    
-    if ([self.things count] >0) {
-            NewThing *singleThing = [self.things objectAtIndex:indexPath.row];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            detailVC.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
-            detailVC.detailThingTitle.text = singleThing.thingName;
-            detailVC.detailThingCreator.text = singleThing.creatorName;
-        });
-    }
-
-
-    
-
-    [self.navigationController pushViewController:detailVC animated:YES];
-}
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     searchBar.text = @"";
