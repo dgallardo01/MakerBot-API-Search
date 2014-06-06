@@ -55,11 +55,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:YES];
-    
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     NSString *accessToken = [defaults objectForKey:@"thingiverseAccessToken"];
     
@@ -78,6 +73,12 @@
             });
         }];
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,6 +120,7 @@
         [tableView registerNib:[UINib nibWithNibName:@"thingCell"  bundle:nil]forCellReuseIdentifier:@"thingsCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"thingCell"];
     }
+    
     
     [[NSOperationQueue mainQueue]addOperationWithBlock:^{
         NewThing *singleThing = [self.things objectAtIndex:indexPath.row];

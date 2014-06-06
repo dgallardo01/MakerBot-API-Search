@@ -32,9 +32,8 @@
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:userInfoURLRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSArray *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
-        NSArray *things = [NewThing thingArrayFromThingDictionaries:responseDictionary];
-        completionBlock(things);
+            NSArray *things = [NewThing thingArrayFromThingDictionaries:responseDictionary];
+            completionBlock(things);
     }];
     [dataTask resume];
 }
@@ -107,8 +106,8 @@
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:userInfoURLRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSArray *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSArray *things = [NewThing thingArrayFromThingDictionaries:responseDictionary];
-        completionBlock(things);
+            NSArray *things = [NewThing thingArrayFromThingDictionaries:responseDictionary];
+                completionBlock(things);
     }];
     [dataTask resume];
 }
