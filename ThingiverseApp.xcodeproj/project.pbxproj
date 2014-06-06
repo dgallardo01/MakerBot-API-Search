@@ -525,6 +525,7 @@
 				30C52B8F19402243004DA99C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30C52B9019402243004DA99C /* Build configuration list for PBXNativeTarget "ThingiverseAppTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +534,7 @@
 				30C52B9219402243004DA99C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
