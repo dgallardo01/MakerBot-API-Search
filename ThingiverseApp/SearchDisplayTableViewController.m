@@ -43,6 +43,7 @@
     searchBar.delegate =self;
     searchBar.placeholder = @"search for a thing";
     self.tableView.tableHeaderView = searchBar;
+    [searchBar becomeFirstResponder];
     
     self.things = [[NSArray alloc]init];
     
@@ -84,7 +85,7 @@
     if ([self.things count] >0) {
         NewThing *singleThing = [self.things objectAtIndex:indexPath.row];
         cell.searchCellLabel.text = singleThing.thingName;
-//        cell.detailTextLabel.text = singleThing.creatorName;
+        //        cell.detailTextLabel.text = singleThing.creatorName;
         cell.searchCellImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
     }
     
@@ -113,13 +114,13 @@
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
     NSString *newSearchText = [regex stringByReplacingMatchesInString:searchText options:0 range:NSMakeRange(0, [searchText length]) withTemplate:@"+"];
     [self.apiClient searchforThing:newSearchText withCompletion:^(NSArray *things) {
-
-                self.things = things;
-                if ([self.things count]>0) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadData];
-                    });
-                }
+        
+        self.things = things;
+        if ([self.things count]>0) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
     }];
 }
 
@@ -128,11 +129,9 @@
     searchBar.text = @"";
     self.things = nil;
     [self.tableView reloadData];
+    [searchBar resignFirstResponder];
 }
 
--(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-    NSLog(@"end editing");
-}
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
