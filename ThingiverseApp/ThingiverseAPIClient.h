@@ -18,4 +18,6 @@
 
 - (void) searchforThing:(NSString *)searchText withCompletion:(void(^)(NSArray * things))completionBlock;
 
+- (void) likeAThing:(NSNumber *)thingID;
+
 @end

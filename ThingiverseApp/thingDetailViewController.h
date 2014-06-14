@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *detailImageView;
 @property (weak, nonatomic) IBOutlet UILabel *detailThingTitle;
 @property (weak, nonatomic) IBOutlet UILabel *detailThingCreator;
+@property (strong, nonatomic) NSNumber *detailThingID;
 
 @end

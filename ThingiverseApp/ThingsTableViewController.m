@@ -165,6 +165,7 @@
         detailVC.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
         detailVC.detailThingTitle.text = singleThing.thingName;
         detailVC.detailThingCreator.text = singleThing.creatorName;
+        detailVC.detailThingID = singleThing.thingID;
     });
     [self.navigationController pushViewController:detailVC animated:YES];
 }

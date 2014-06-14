@@ -7,8 +7,11 @@
 //
 
 #import "thingDetailViewController.h"
+#import "ThingiverseAPIClient.h"
 
 @interface thingDetailViewController ()
+
+- (IBAction)likeButtonTapped:(id)sender;
 
 @end
 
@@ -46,4 +49,10 @@
 }
 */
 
+- (IBAction)likeButtonTapped:(id)sender {
+    ThingiverseAPIClient *apiClient = [[ThingiverseAPIClient alloc] init];
+    
+    [apiClient likeAThing:self.detailThingID];
+    NSLog(@"like tapped");
+}
 @end
