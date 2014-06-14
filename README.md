@@ -11,4 +11,4 @@ Todo
 
 - Improve search feature to make API calls when necessary
 - Improve UI elements
-- Add a "POST" feature for users to be able to save to a collection for printing later.
+- <s>Add a "POST" feature for users to be able to save to a collection for printing later.</s>
