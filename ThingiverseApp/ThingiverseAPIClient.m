@@ -112,5 +112,25 @@
     [dataTask resume];
 }
 
+- (void) likeAThing:(NSNumber *)thingID{
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSString *accessToken = [defaults objectForKey:@"thingiverseAccessToken"];
+    
+    NSString *likeString = [NSString stringWithFormat:@"https://api.thingiverse.com/things/%@/likes?access_token=%@", thingID, accessToken];
+    
+    NSURL *likeURL = [NSURL URLWithString:likeString];
+    
+    NSMutableURLRequest *userInfoURLRequest = [NSMutableURLRequest requestWithURL:likeURL];
+    userInfoURLRequest.HTTPMethod = @"POST";
+    
+    NSString *params = [NSString stringWithFormat:@"things/%@/likes", thingID];
+    userInfoURLRequest.HTTPBody = [params dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:userInfoURLRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    }];
+    [dataTask resume];
+}
+
 
 @end

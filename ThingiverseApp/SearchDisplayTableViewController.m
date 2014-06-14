@@ -114,11 +114,11 @@
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
     NSString *newSearchText = [regex stringByReplacingMatchesInString:searchText options:0 range:NSMakeRange(0, [searchText length]) withTemplate:@"+"];
     [self.apiClient searchforThing:newSearchText withCompletion:^(NSArray *things) {
-        
         self.things = things;
         if ([self.things count]>0) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
+                NSLog(@"api reload tableivew");
             });
         }
     }];
