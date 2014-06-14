@@ -12,6 +12,7 @@
 @interface thingDetailViewController ()
 
 - (IBAction)likeButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
 @end
 
@@ -53,6 +54,8 @@
     ThingiverseAPIClient *apiClient = [[ThingiverseAPIClient alloc] init];
     
     [apiClient likeAThing:self.detailThingID];
-    NSLog(@"like tapped");
+    [self.likeButton setTitle:@"Liked!" forState:UIControlStateNormal];
 }
+
+
 @end

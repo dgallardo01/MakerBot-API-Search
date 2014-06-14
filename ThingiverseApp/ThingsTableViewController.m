@@ -13,12 +13,15 @@
 #import "thingDetailViewController.h"
 #import "ThingiverseAPIClient.h"
 #import "SearchDisplayTableViewController.h"
+#import "ImageFilter.h"
 
 @interface ThingsTableViewController ()
 
 @property (strong, nonatomic) NSArray *things;
 @property (strong, nonatomic) NSOperationQueue *apiOperation;
 @property (strong, nonatomic) ThingiverseAPIClient *thingiverseAPIClient;
+@property (strong, nonatomic) ImageFilter *imageFilter;
+
 - (IBAction)searchButtonTapped:(id)sender;
 
 @end
@@ -42,6 +45,7 @@
     self.tableView.dataSource = self;
     
     self.thingiverseAPIClient = [[ThingiverseAPIClient alloc]init];
+    self.imageFilter = [[ImageFilter alloc]init];
     
     self.tableView.rowHeight = 300.0f;
     [self.tableView registerNib:[UINib nibWithNibName:@"thingCell"  bundle:nil]forCellReuseIdentifier:@"thingsCell"];
@@ -163,6 +167,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         detailVC.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
+        detailVC.detailBGImageView.image = [self.imageFilter filterImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]]];
         detailVC.detailThingTitle.text = singleThing.thingName;
         detailVC.detailThingCreator.text = singleThing.creatorName;
         detailVC.detailThingID = singleThing.thingID;

@@ -35,6 +35,7 @@
 		30C52BB21940229D004DA99C /* NewThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C52BAF1940229D004DA99C /* NewThing.m */; };
 		30C8D85619424ACA0034ED39 /* searchTableviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C8D85519424ACA0034ED39 /* searchTableviewCell.xib */; };
 		30C8D85919424B950034ED39 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C8D85819424B950034ED39 /* SearchTableViewCell.m */; };
+		30D511FC194D16A000DF646B /* ImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D511FB194D16A000DF646B /* ImageFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		30C8D85519424ACA0034ED39 /* searchTableviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchTableviewCell.xib; sourceTree = "<group>"; };
 		30C8D85719424B950034ED39 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		30C8D85819424B950034ED39 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		30D511FA194D16A000DF646B /* ImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFilter.h; sourceTree = "<group>"; };
+		30D511FB194D16A000DF646B /* ImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				30C52BAD1940229D004DA99C /* ThingiverseAPIClient.m */,
 				30C52BAE1940229D004DA99C /* NewThing.h */,
 				30C52BAF1940229D004DA99C /* NewThing.m */,
+				30D511FA194D16A000DF646B /* ImageFilter.h */,
+				30D511FB194D16A000DF646B /* ImageFilter.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				30C8D85919424B950034ED39 /* SearchTableViewCell.m in Sources */,
 				30C52B7419402243004DA99C /* ThingiverseApp.xcdatamodeld in Sources */,
 				30C52BA71940228D004DA99C /* thingDetailViewController.m in Sources */,
+				30D511FC194D16A000DF646B /* ImageFilter.m in Sources */,
 				30C52B6D19402243004DA99C /* main.m in Sources */,
 				30C52BA61940228D004DA99C /* ThingsTableViewController.m in Sources */,
 				30C52BA51940228D004DA99C /* ViewController.m in Sources */,
