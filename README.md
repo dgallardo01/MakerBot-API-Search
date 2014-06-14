@@ -10,5 +10,6 @@ Todo
 ====
 
 - Improve search feature to make API calls when necessary
+- Add persistence for likes
 - Improve UI elements
 - <s>Add a "POST" feature for users to be able to save to a collection for printing later.</s>
