@@ -11,12 +11,14 @@
 #import "ThingiverseAPIClient.h"
 #import "thingDetailViewController.h"
 #import "SearchTableViewCell.h"
+#import "ImageFilter.h"
 
 @interface SearchDisplayTableViewController ()
 
 @property (strong, nonatomic) NSArray *things;
 @property (strong, nonatomic) UISearchDisplayController *searchController;
 @property (strong, nonatomic) ThingiverseAPIClient *apiClient;
+@property (strong, nonatomic) ImageFilter *imageFilter;
 
 @end
 
@@ -36,14 +38,18 @@
     [super viewDidLoad];
     
     self.apiClient = [[ThingiverseAPIClient alloc]init];
+    self.imageFilter = [ImageFilter new];
+    self.navigationController.navigationBar.topItem.title = @"";
     
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
     [searchBar sizeToFit];
     searchBar.showsCancelButton = YES;
+    
     searchBar.delegate =self;
     searchBar.placeholder = @"search for a thing";
-    self.tableView.tableHeaderView = searchBar;
     [searchBar becomeFirstResponder];
+    
+    self.navigationItem.titleView = searchBar;
     
     self.things = [[NSArray alloc]init];
     
@@ -100,8 +106,10 @@
         NewThing *singleThing = [self.things objectAtIndex:indexPath.row];
         dispatch_async(dispatch_get_main_queue(), ^{
             detailVC.detailImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]];
+            detailVC.detailBGImageView.image = [self.imageFilter filterImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", singleThing.thingThumbnail]]]]];
             detailVC.detailThingTitle.text = singleThing.thingName;
             detailVC.detailThingCreator.text = singleThing.creatorName;
+            
         });
     }
     [self.navigationController pushViewController:detailVC animated:YES];
