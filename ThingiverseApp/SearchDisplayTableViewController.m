@@ -39,11 +39,11 @@
     
     self.apiClient = [[ThingiverseAPIClient alloc]init];
     self.imageFilter = [ImageFilter new];
+    
     self.navigationController.navigationBar.topItem.title = @"";
     
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
     [searchBar sizeToFit];
-    searchBar.showsCancelButton = YES;
     
     searchBar.delegate =self;
     searchBar.placeholder = @"search for a thing";
@@ -133,12 +133,20 @@
     
 }
 
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    searchBar.showsCancelButton = YES;
+
+}
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     searchBar.text = @"";
     self.things = nil;
     [self.tableView reloadData];
     [searchBar resignFirstResponder];
+    searchBar.showsCancelButton = NO;
+    [self.navigationItem setHidesBackButton:NO animated:YES];
+
 }
 /*
  // Override to support conditional editing of the table view.
